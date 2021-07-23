@@ -1,0 +1,15 @@
+1.打開VSCode開啟C:\xampp裡的htdocs資料夾
+2.在終端機(terminal)裡輸入git clone https://github.com/Chen-U-Sheng/bus.git
+3.在終端機(terminal)裡輸入cd bus
+//進入bus資料夾
+4.在終端機(terminal)裡輸入composer install
+5.在終端機(terminal)裡輸入php artisan key:generate
+6.在終端機(terminal)裡輸入cp .env.example .env
+//複製.env.example為.env
+7.開啟XAMPP Control 開啟Apache 和 MySQL(顯示綠色表示連線成功)
+8.到瀏覽器輸入127.0.0.1後點擊右上角的phpMyAdmin
+9.按下左邊的新增新增一個資料庫(utf8mb4_unicode_ci)
+10.新增一個使用者帳號並給予上述資料庫的權限
+11.回到.env修改DB_DATABASE , DB_USERNAME , DB_PASSWORD
+12.在終端機(terminal)裡輸入php artisan migrate
+13.回到瀏覽器輸入網址127.0.0.1/bus/public/buses進到公車總表
